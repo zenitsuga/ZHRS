@@ -8,13 +8,47 @@ using System.Reflection;
 using System.Windows.Forms;
 using System.Drawing;
 using Licensing;
+using MyHRS.Classes;
 
 namespace MyHRS.Classes
 {
     public class clsYU
-    {   
+    {
+        clsDatabase cd = new clsDatabase();
+        clsIni ci;
+
         string m_ExePath;
         string m_LogName;
+
+        public string IniValue(string IniFields)
+        {
+            string result = string.Empty;
+            try
+            {
+                ci = new clsIni(Environment.CurrentDirectory + "\\Settings.ini");
+            }
+            catch(Exception ex)
+            {
+                LogWrite(ex.Message, "Read Ini Value:(" + IniFields + ")", "Error");
+            }
+            return result;
+        }
+
+        public bool CheckDatabaseConnection(string ServerName,string Databasename,string Username,string Password)
+        {
+            bool result = false;
+            string ErrMsg = string.Empty;
+            try
+            {
+                cd.TestConnection(ServerName, Databasename, Username, Password,ref ErrMsg);
+            }
+            catch(Exception ex)
+            {
+                ErrMsg = ex.Message.ToString();
+                LogWrite(ErrMsg, "CheckDatabaseConnection", "Error");
+            }
+            return result;
+        }
 
         public bool isValidLicense()
         {

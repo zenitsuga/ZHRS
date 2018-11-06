@@ -42,7 +42,28 @@
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlMenuGroup3 = new System.Windows.Forms.Panel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.btnMenuGroup3 = new System.Windows.Forms.Button();
+            this.pnlMenuGroup2 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.btnMenuGroup2 = new System.Windows.Forms.Button();
+            this.pnlMenuGroup1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
+            this.btnMenuGroup1 = new System.Windows.Forms.Button();
+            this.lblMenu = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
+            this.pnlMenu.SuspendLayout();
+            this.pnlMenuGroup3.SuspendLayout();
+            this.pnlMenuGroup2.SuspendLayout();
+            this.pnlMenuGroup1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -150,13 +171,246 @@
             this.registrationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.registrationToolStripMenuItem.Text = "&Registration";
             // 
+            // pnlMenu
+            // 
+            this.pnlMenu.Controls.Add(this.pnlMenuGroup3);
+            this.pnlMenu.Controls.Add(this.pnlMenuGroup2);
+            this.pnlMenu.Controls.Add(this.pnlMenuGroup1);
+            this.pnlMenu.Controls.Add(this.lblMenu);
+            this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlMenu.Location = new System.Drawing.Point(0, 24);
+            this.pnlMenu.Name = "pnlMenu";
+            this.pnlMenu.Size = new System.Drawing.Size(200, 312);
+            this.pnlMenu.TabIndex = 3;
+            // 
+            // pnlMenuGroup3
+            // 
+            this.pnlMenuGroup3.Controls.Add(this.button8);
+            this.pnlMenuGroup3.Controls.Add(this.button9);
+            this.pnlMenuGroup3.Controls.Add(this.button10);
+            this.pnlMenuGroup3.Controls.Add(this.btnMenuGroup3);
+            this.pnlMenuGroup3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMenuGroup3.Location = new System.Drawing.Point(0, 231);
+            this.pnlMenuGroup3.Name = "pnlMenuGroup3";
+            this.pnlMenuGroup3.Size = new System.Drawing.Size(200, 109);
+            this.pnlMenuGroup3.TabIndex = 3;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Silver;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Location = new System.Drawing.Point(0, 75);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(200, 25);
+            this.button8.TabIndex = 3;
+            this.button8.Text = "Sub Menu 3";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Silver;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Location = new System.Drawing.Point(0, 50);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(200, 25);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Sub Menu 2";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Silver;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Location = new System.Drawing.Point(0, 25);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(200, 25);
+            this.button10.TabIndex = 1;
+            this.button10.Text = "Sub Menu 1";
+            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuGroup3
+            // 
+            this.btnMenuGroup3.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuGroup3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuGroup3.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnMenuGroup3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuGroup3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuGroup3.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuGroup3.Name = "btnMenuGroup3";
+            this.btnMenuGroup3.Size = new System.Drawing.Size(200, 25);
+            this.btnMenuGroup3.TabIndex = 0;
+            this.btnMenuGroup3.Text = "Menu Group 3";
+            this.btnMenuGroup3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuGroup3.UseVisualStyleBackColor = false;
+            // 
+            // pnlMenuGroup2
+            // 
+            this.pnlMenuGroup2.Controls.Add(this.button4);
+            this.pnlMenuGroup2.Controls.Add(this.button5);
+            this.pnlMenuGroup2.Controls.Add(this.button6);
+            this.pnlMenuGroup2.Controls.Add(this.btnMenuGroup2);
+            this.pnlMenuGroup2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMenuGroup2.Location = new System.Drawing.Point(0, 127);
+            this.pnlMenuGroup2.Name = "pnlMenuGroup2";
+            this.pnlMenuGroup2.Size = new System.Drawing.Size(200, 104);
+            this.pnlMenuGroup2.TabIndex = 2;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Location = new System.Drawing.Point(0, 75);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(200, 25);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Sub Menu 3";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Location = new System.Drawing.Point(0, 50);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(200, 25);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Sub Menu 2";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Silver;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Location = new System.Drawing.Point(0, 25);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(200, 25);
+            this.button6.TabIndex = 1;
+            this.button6.Text = "Sub Menu 1";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuGroup2
+            // 
+            this.btnMenuGroup2.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuGroup2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuGroup2.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnMenuGroup2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuGroup2.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuGroup2.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuGroup2.Name = "btnMenuGroup2";
+            this.btnMenuGroup2.Size = new System.Drawing.Size(200, 25);
+            this.btnMenuGroup2.TabIndex = 0;
+            this.btnMenuGroup2.Text = "Menu Group 2";
+            this.btnMenuGroup2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuGroup2.UseVisualStyleBackColor = false;
+            // 
+            // pnlMenuGroup1
+            // 
+            this.pnlMenuGroup1.Controls.Add(this.button3);
+            this.pnlMenuGroup1.Controls.Add(this.button2);
+            this.pnlMenuGroup1.Controls.Add(this.btnAbout);
+            this.pnlMenuGroup1.Controls.Add(this.btnMenuGroup1);
+            this.pnlMenuGroup1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlMenuGroup1.Location = new System.Drawing.Point(0, 23);
+            this.pnlMenuGroup1.Name = "pnlMenuGroup1";
+            this.pnlMenuGroup1.Size = new System.Drawing.Size(200, 104);
+            this.pnlMenuGroup1.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(0, 75);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 25);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Sub Menu 3";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(0, 50);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 25);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Sub Menu 2";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.BackColor = System.Drawing.Color.Silver;
+            this.btnAbout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbout.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbout.Location = new System.Drawing.Point(0, 25);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(200, 25);
+            this.btnAbout.TabIndex = 1;
+            this.btnAbout.Text = "About";
+            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAbout.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuGroup1
+            // 
+            this.btnMenuGroup1.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuGroup1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMenuGroup1.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnMenuGroup1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuGroup1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenuGroup1.Location = new System.Drawing.Point(0, 0);
+            this.btnMenuGroup1.Name = "btnMenuGroup1";
+            this.btnMenuGroup1.Size = new System.Drawing.Size(200, 25);
+            this.btnMenuGroup1.TabIndex = 0;
+            this.btnMenuGroup1.Text = "Menu Group 1";
+            this.btnMenuGroup1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMenuGroup1.UseVisualStyleBackColor = false;
+            // 
+            // lblMenu
+            // 
+            this.lblMenu.BackColor = System.Drawing.Color.DarkGray;
+            this.lblMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblMenu.ForeColor = System.Drawing.Color.White;
+            this.lblMenu.Location = new System.Drawing.Point(0, 0);
+            this.lblMenu.Name = "lblMenu";
+            this.lblMenu.Size = new System.Drawing.Size(200, 23);
+            this.lblMenu.TabIndex = 0;
+            this.lblMenu.Text = "Main Menu";
+            this.lblMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 358);
+            this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -165,6 +419,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.pnlMenu.ResumeLayout(false);
+            this.pnlMenuGroup3.ResumeLayout(false);
+            this.pnlMenuGroup2.ResumeLayout(false);
+            this.pnlMenuGroup1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,6 +444,23 @@
         private System.Windows.Forms.ToolStripMenuItem databaseConnectionToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem registrationToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlMenu;
+        private System.Windows.Forms.Panel pnlMenuGroup3;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnMenuGroup3;
+        private System.Windows.Forms.Panel pnlMenuGroup2;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnMenuGroup2;
+        private System.Windows.Forms.Panel pnlMenuGroup1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button btnMenuGroup1;
+        private System.Windows.Forms.Label lblMenu;
     }
 }
 

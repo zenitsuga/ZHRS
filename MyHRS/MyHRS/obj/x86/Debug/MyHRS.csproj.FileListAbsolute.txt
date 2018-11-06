@@ -17,3 +17,22 @@ C:\Users\bok\Documents\Visual Studio 2010\Projects\MyHRS\MyHRS\obj\x86\Debug\MyH
 C:\Users\bok\Documents\Visual Studio 2010\Projects\MyHRS\MyHRS\obj\x86\Debug\MyHRS.csproj.GenerateResource.Cache
 C:\Users\bok\Documents\Visual Studio 2010\Projects\MyHRS\MyHRS\obj\x86\Debug\MyHRS.exe
 C:\Users\bok\Documents\Visual Studio 2010\Projects\MyHRS\MyHRS\obj\x86\Debug\MyHRS.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\MyHRS.exe.config
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.exe
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Resources\Stop.png
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Resources\Database.png
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Resources\Go.png
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Resources\LoginPIC.jpg
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Form1.resx
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Form1.cs
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Form1.Designer.cs
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\MyHRS.exe
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\MyHRS.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Licensing.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.csprojResolveAssemblyReference.cache
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Form1.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Properties.Resources.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.DatabaseConnection.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.SplashLogin.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.csproj.GenerateResource.Cache

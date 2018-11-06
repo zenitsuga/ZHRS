@@ -74,15 +74,42 @@ namespace MyHRS.Screens
             YU.LogWrite("Start Program","SplashLogin", "Log");
         }
 
+        private bool CheckDatabase()
+        {
+            bool result = false;
+            try
+            {
+                string ServerName = YU.IniValue("ServerName");
+                YU.CheckDatabaseConnection(
+
+            }
+            catch
+            {
+            }
+            return result;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             progressBar1.Value += 10;
+            if (progressBar1.Value == 20)
+            {
+                Thread.Sleep(100);
+                timer1.Enabled = false;
+                if (!CheckDatabase())
+                {
+                    MessageBox.Show("Error: Cannot connect to database. Check your connection", "Database failed to connect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(0);
+                }
+                timer1.Enabled = true;
+            }
             if (progressBar1.Value == 100)
             {
                 Thread.Sleep(100);
                 timer1.Enabled = false;
                 this.Height = 310;
             }
+           
         }
 
         private void tb_Enter(object sender, EventArgs e)
