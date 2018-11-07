@@ -1,0 +1,33 @@
+Error:	11-07-2018 06:38:25:	Database Connection:	Cannot connect to database
+Error:	11-07-2018 06:39:55:	CheckDatabaseConnection:	Object reference not set to an instance of an object.
+Error:	11-07-2018 06:40:04:	Database Connection:	Cannot connect to database
+Error:	11-07-2018 06:43:37:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-07-2018 07:12:55:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:13:03:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:13:53:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:13:54:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:34:32:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:34:37:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:35:11:	AccessCode invalid:	Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Error:	11-07-2018 07:36:35:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:36:40:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:37:51:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:37:58:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:46:19:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:46:21:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:46:24:	SerialKey Invalid:	Serial Key:
+Error:	11-07-2018 07:50:41:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:50:44:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:50:46:	SerialKey Invalid:	Serial Key:
+Error:	11-07-2018 07:55:14:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 07:55:16:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 07:55:19:	SerialKey Invalid:	Serial Key:
+Error:	11-07-2018 08:03:45:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 08:03:51:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 08:48:35:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 08:48:36:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 08:51:01:	SerialKey Invalid:	Serial Key:
+Error:	11-07-2018 08:51:49:	MachineID mismatch:	Machine ID:BFEBFBFF00020652
+Error:	11-07-2018 08:51:51:	Invalid MachineID:	MachineID Mismatch (BFEBFBFF00020652)
+Error:	11-07-2018 08:52:15:	SerialKey Invalid:	Serial Key:
+Error:	11-07-2018 08:52:52:	SerialKey Invalid:	Serial Key:

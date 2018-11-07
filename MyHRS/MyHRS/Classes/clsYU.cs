@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using Licensing;
 using MyHRS.Classes;
+using System.Management;
 
 namespace MyHRS.Classes
 {
@@ -20,16 +21,101 @@ namespace MyHRS.Classes
         string m_ExePath;
         string m_LogName;
 
-        public string IniValue(string IniFields)
+        public bool WriteIniValue(string IniFields,string FieldValue, string SectionName)
+        {
+            bool result = false;
+            try
+            {
+                ci = new clsIni(Environment.CurrentDirectory + "\\Settings.ini");
+                ci.Write(IniFields, FieldValue, SectionName);
+                result = true;
+            }
+            catch
+            {
+            }
+            return result;
+        }
+        public string IniValue(string IniFields,string SectionName)
         {
             string result = string.Empty;
             try
             {
                 ci = new clsIni(Environment.CurrentDirectory + "\\Settings.ini");
+                result = ci.Read(IniFields, SectionName);
             }
             catch(Exception ex)
             {
                 LogWrite(ex.Message, "Read Ini Value:(" + IniFields + ")", "Error");
+            }
+            return result;
+        }
+
+        public bool CheckEvalFile(bool isCheck)
+        {
+            bool result = false;
+            try
+            {
+                string FileEval = Environment.CurrentDirectory + "\\" + GetEncryptWord("Eval");
+                if (!File.Exists(FileEval))
+                {
+                    File.Create(FileEval);
+                    result = true;
+                }
+            }
+            catch (Exception)
+            {
+                
+            }
+            return result;
+        }
+
+        public string GetMachineID()
+        {
+            string result = string.Empty;
+            try
+            {
+                ManagementClass mc = new ManagementClass("win32_processor");
+                ManagementObjectCollection moc = mc.GetInstances();
+
+                foreach (ManagementObject mo in moc)
+                {
+                    if (result == "")
+                    {
+                        //Get only the first CPU's ID
+                        result = mo.Properties["processorID"].Value.ToString();
+                        break;
+                    }
+                }
+                return result ;
+            }
+            catch
+            {
+            }
+            return result;
+        }
+        public string GetDecryptWord(string StrVal)
+        {
+            string result = string.Empty;
+            try
+            {
+                string Keys = Licensing.CryptoEngine.Key();
+                result = Licensing.CryptoEngine.Decrypt(StrVal, Keys);
+            }
+            catch
+            {
+            }
+            return result;
+        }
+        public string GetEncryptWord(string StrVal)
+        {
+            string result = string.Empty;
+            try
+            {
+              string Keys = Licensing.CryptoEngine.Key();
+              result = Licensing.CryptoEngine.Encrypt(StrVal, Keys);
+            }
+            catch
+            {
             }
             return result;
         }
@@ -40,7 +126,12 @@ namespace MyHRS.Classes
             string ErrMsg = string.Empty;
             try
             {
-                cd.TestConnection(ServerName, Databasename, Username, Password,ref ErrMsg);
+                cd.SQLType = "sql";
+                result = cd.TestConnection(ServerName, Databasename, Username, Password,ref ErrMsg);
+                if (!string.IsNullOrEmpty(ErrMsg))
+                {
+                    LogWrite(ErrMsg, "CheckDatabaseConnection", "Error");
+                }
             }
             catch(Exception ex)
             {
@@ -50,12 +141,28 @@ namespace MyHRS.Classes
             return result;
         }
 
-        public bool isValidLicense()
+        public bool isValidLicense(ref string SerialKey,string AccessCode,ref int daysRemain)
         {
             bool result = false;
             try
             {
-                
+                string GetIniSerialKey = IniValue("SerialKey", "Codes");
+                if (!string.IsNullOrEmpty(GetIniSerialKey))
+                {
+                    string DecryptKey = GetDecryptWord(GetIniSerialKey);
+                    if (DecryptKey.Contains("_"))
+                    {
+                        if (DecryptKey.Split('_').Count() == 3)
+                        {
+                            if (AccessCode == DecryptKey.Split('_')[0].Trim())
+                            {
+                                DateTime dtLast = DateTime.Parse(DecryptKey.Split('_')[2].Trim());
+                                daysRemain = dtLast.Subtract(DateTime.Now).Days;
+                                result = true;
+                            }
+                        }
+                    }
+                }
             }
             catch
             {

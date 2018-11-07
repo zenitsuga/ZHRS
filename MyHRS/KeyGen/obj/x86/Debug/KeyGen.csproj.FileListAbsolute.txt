@@ -1,0 +1,8 @@
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\bin\Debug\KeyGen.exe.config
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\bin\Debug\KeyGen.exe
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\bin\Debug\KeyGen.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\obj\x86\Debug\KeyGen.Form1.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\obj\x86\Debug\KeyGen.Properties.Resources.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\obj\x86\Debug\KeyGen.csproj.GenerateResource.Cache
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\obj\x86\Debug\KeyGen.exe
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\KeyGen\obj\x86\Debug\KeyGen.pdb

@@ -44,6 +44,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.databaseConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -58,7 +59,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.panel2);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Location = new System.Drawing.Point(123, 155);
+            this.groupBox1.Location = new System.Drawing.Point(123, 162);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(249, 110);
             this.groupBox1.TabIndex = 1;
@@ -132,7 +133,7 @@
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(0, 131);
+            this.progressBar1.Location = new System.Drawing.Point(0, 128);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(493, 16);
             this.progressBar1.TabIndex = 2;
@@ -158,7 +159,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PBSplashImage.Location = new System.Drawing.Point(0, 0);
             this.PBSplashImage.Name = "PBSplashImage";
-            this.PBSplashImage.Size = new System.Drawing.Size(493, 128);
+            this.PBSplashImage.Size = new System.Drawing.Size(493, 125);
             this.PBSplashImage.TabIndex = 0;
             this.PBSplashImage.TabStop = false;
             // 
@@ -189,11 +190,23 @@
             this.databaseConnectionToolStripMenuItem.Text = "Database Connection";
             this.databaseConnectionToolStripMenuItem.Click += new System.EventHandler(this.databaseConnectionToolStripMenuItem_Click);
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblStatus.Location = new System.Drawing.Point(1, 145);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(47, 13);
+            this.lblStatus.TabIndex = 5;
+            this.lblStatus.Text = "Ready...";
+            // 
             // SplashLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 149);
+            this.ClientSize = new System.Drawing.Size(495, 160);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.groupBox1);
@@ -239,5 +252,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem databaseConnectionToolStripMenuItem;
+        private System.Windows.Forms.Label lblStatus;
     }
 }

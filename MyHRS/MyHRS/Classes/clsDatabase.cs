@@ -20,10 +20,11 @@ namespace MyHRS.Classes
                 string SQLConnString = string.Empty;
                 if (SQLType.ToLower() == "sql")
                 {
-                    SQLConnString = "Server = ServerName; Database = Database; User Id = Username;Password = Password;";
+                    SQLConnString = "Server = " + ServerName + "; Database = " + Database + "; User Id = "+ Username +";Password = "+Password+";";
                 }
                 if (!string.IsNullOrEmpty(SQLConnString))
                 {
+                    SQLConn = new SqlConnection();
                     SQLConn.ConnectionString = SQLConnString;
                     SQLConn.Open();
                     result = SQLConn.State == ConnectionState.Open ? true : false;

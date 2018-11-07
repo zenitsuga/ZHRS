@@ -1,0 +1,23 @@
+System Features
+
+1.Systems validates via License Key
+2.Each Unit/Machine has unique key to access.
+3.Systems has Serial Keys to use.
+
+Login - Users
+1. Users Type - Staff,Manager,Admin
+
+Module under EMS
+1. Recruitment (Hiring) Module 
+	1.1 Job Analysis
+		- Covers here Job Title, Job Description , Job Task and Responsibilities
+	1.2 Sourcing
+		- Job Availability, Pooling, Resume Uploading
+	1.3 Screening and Application
+		- Job Selections (For Hire,For Keep, Remove)
+		- Search Applicant
+		- Recommendation 
+	1.4 Acceptance
+		- Job Orientation
+		- Compensation and Benifits
+		- Leaves

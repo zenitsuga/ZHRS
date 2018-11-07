@@ -36,3 +36,5 @@ E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Properties.Resou
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.DatabaseConnection.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.SplashLogin.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.csproj.GenerateResource.Cache
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Settings.ini
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\bin\Debug\Licensing.dll

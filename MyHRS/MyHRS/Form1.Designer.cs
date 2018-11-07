@@ -59,6 +59,7 @@
             this.btnAbout = new System.Windows.Forms.Button();
             this.btnMenuGroup1 = new System.Windows.Forms.Button();
             this.lblMenu = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.pnlMenu.SuspendLayout();
             this.pnlMenuGroup3.SuspendLayout();
@@ -190,7 +191,7 @@
             this.pnlMenuGroup3.Controls.Add(this.button10);
             this.pnlMenuGroup3.Controls.Add(this.btnMenuGroup3);
             this.pnlMenuGroup3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenuGroup3.Location = new System.Drawing.Point(0, 231);
+            this.pnlMenuGroup3.Location = new System.Drawing.Point(0, 281);
             this.pnlMenuGroup3.Name = "pnlMenuGroup3";
             this.pnlMenuGroup3.Size = new System.Drawing.Size(200, 109);
             this.pnlMenuGroup3.TabIndex = 3;
@@ -259,7 +260,7 @@
             this.pnlMenuGroup2.Controls.Add(this.button6);
             this.pnlMenuGroup2.Controls.Add(this.btnMenuGroup2);
             this.pnlMenuGroup2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlMenuGroup2.Location = new System.Drawing.Point(0, 127);
+            this.pnlMenuGroup2.Location = new System.Drawing.Point(0, 177);
             this.pnlMenuGroup2.Name = "pnlMenuGroup2";
             this.pnlMenuGroup2.Size = new System.Drawing.Size(200, 104);
             this.pnlMenuGroup2.TabIndex = 2;
@@ -317,12 +318,13 @@
             this.btnMenuGroup2.Name = "btnMenuGroup2";
             this.btnMenuGroup2.Size = new System.Drawing.Size(200, 25);
             this.btnMenuGroup2.TabIndex = 0;
-            this.btnMenuGroup2.Text = "Menu Group 2";
+            this.btnMenuGroup2.Text = "Employees";
             this.btnMenuGroup2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuGroup2.UseVisualStyleBackColor = false;
             // 
             // pnlMenuGroup1
             // 
+            this.pnlMenuGroup1.Controls.Add(this.button1);
             this.pnlMenuGroup1.Controls.Add(this.button3);
             this.pnlMenuGroup1.Controls.Add(this.button2);
             this.pnlMenuGroup1.Controls.Add(this.btnAbout);
@@ -330,7 +332,7 @@
             this.pnlMenuGroup1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMenuGroup1.Location = new System.Drawing.Point(0, 23);
             this.pnlMenuGroup1.Name = "pnlMenuGroup1";
-            this.pnlMenuGroup1.Size = new System.Drawing.Size(200, 104);
+            this.pnlMenuGroup1.Size = new System.Drawing.Size(200, 154);
             this.pnlMenuGroup1.TabIndex = 1;
             // 
             // button3
@@ -343,7 +345,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 25);
             this.button3.TabIndex = 3;
-            this.button3.Text = "Sub Menu 3";
+            this.button3.Text = "Application Screening";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
@@ -357,7 +359,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 25);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Sub Menu 2";
+            this.button2.Text = "Sourcing";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -371,7 +373,7 @@
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(200, 25);
             this.btnAbout.TabIndex = 1;
-            this.btnAbout.Text = "About";
+            this.btnAbout.Text = "Job Analysis";
             this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAbout.UseVisualStyleBackColor = false;
             // 
@@ -386,7 +388,7 @@
             this.btnMenuGroup1.Name = "btnMenuGroup1";
             this.btnMenuGroup1.Size = new System.Drawing.Size(200, 25);
             this.btnMenuGroup1.TabIndex = 0;
-            this.btnMenuGroup1.Text = "Menu Group 1";
+            this.btnMenuGroup1.Text = "Recruitment";
             this.btnMenuGroup1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenuGroup1.UseVisualStyleBackColor = false;
             // 
@@ -401,6 +403,20 @@
             this.lblMenu.TabIndex = 0;
             this.lblMenu.Text = "Main Menu";
             this.lblMenu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(0, 100);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(200, 25);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Application Screening";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
@@ -461,6 +477,7 @@
         private System.Windows.Forms.Button btnAbout;
         private System.Windows.Forms.Button btnMenuGroup1;
         private System.Windows.Forms.Label lblMenu;
+        private System.Windows.Forms.Button button1;
     }
 }
 
