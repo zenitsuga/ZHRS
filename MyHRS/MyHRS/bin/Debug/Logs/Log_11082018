@@ -1,0 +1,77 @@
+Log:	11-08-2018 06:20:18:	SplashLogin:	Start Program
+Log:	11-08-2018 06:20:19:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 06:20:22:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 06:20:25:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 06:20:26:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 06:20:28:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 06:20:38:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:20:51:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:21:04:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:21:12:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:21:41:	SplashLogin:	Start Program
+Log:	11-08-2018 06:21:42:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 06:21:44:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 06:21:47:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 06:21:48:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 06:21:49:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 06:22:25:	SplashLogin:	Start Program
+Log:	11-08-2018 06:22:26:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 06:22:27:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 06:22:30:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 06:22:31:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 06:22:32:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 06:26:20:	SplashLogin:	Start Program
+Log:	11-08-2018 06:26:21:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 06:26:28:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 06:26:32:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 06:26:33:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 06:26:35:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 06:27:31:	SplashLogin:	Start Program
+Log:	11-08-2018 06:27:32:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 06:27:34:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 06:27:37:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 06:27:38:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 06:27:39:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 06:29:06:	SplashLogin:	Start Program
+Log:	11-08-2018 06:29:07:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 06:29:09:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 06:29:12:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 06:29:13:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 06:29:14:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 06:29:32:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:29:40:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 06:30:44:	DatabaseConnection:	Trying to connect
+Log:	11-08-2018 06:30:53:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:30:53:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 06:35:07:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 06:35:07:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 06:35:11:	DatabaseConnection:	Trying to connect
+Log:	11-08-2018 11:08:11:	SplashLogin:	Start Program
+Log:	11-08-2018 11:08:12:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 11:08:15:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 11:08:20:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 11:08:21:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 11:08:22:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 11:08:35:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 11:08:35:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 11:10:01:	SplashLogin:	Start Program
+Log:	11-08-2018 11:10:02:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 11:10:04:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 11:10:06:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 11:10:07:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 11:10:09:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 11:10:12:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 11:10:13:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 11:10:18:	DatabaseConnection:	Trying to connect
+Log:	11-08-2018 11:10:24:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 11:10:24:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 11:12:15:	SplashLogin:	Start Program
+Log:	11-08-2018 11:12:16:	Database Connection:	Trying to connect into database
+Log:	11-08-2018 11:12:17:	Checking MachineID:	Matching MachineID :
+Log:	11-08-2018 11:12:20:	Checking MachineID Done:	Registered Machine ID:BFEBFBFF00020652
+Log:	11-08-2018 11:12:21:	Checking AccessCode:	Matching AccessCode :
+Log:	11-08-2018 11:12:23:	Checking AccessCode Done:	Registered Access Code:39H6g7VQE35/f2TB8Qu28Ot3nb289mb5
+Log:	11-08-2018 11:12:26:	DatabaseConnection:	Database Connection Open
+Log:	11-08-2018 11:12:26:	DatabaseConnection:	Reading Ini File: DatabaseConnection
+Log:	11-08-2018 11:12:34:	DatabaseConnection:	Trying to connect
+Log:	11-08-2018 11:12:38:	DatabaseConnection:	Trying to connect
