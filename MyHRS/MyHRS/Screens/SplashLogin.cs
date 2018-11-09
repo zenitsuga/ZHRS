@@ -112,6 +112,11 @@ namespace MyHRS.Screens
                 {
                     INIMacID = YU.IniValue("MachineID", "Codes");
                 }
+                if (MachineID == INIMacID)
+                {
+                    MachineID = INIMacID;
+                    result = true;
+                }
             }
             catch
             {
@@ -127,7 +132,7 @@ namespace MyHRS.Screens
                 string ServerName = YU.IniValue("ServerName","DatabaseConnection");
                 string DatabaseName = YU.IniValue("DatabaseName","DatabaseConnection");
                 string Username = YU.IniValue("Username","DatabaseConnection");
-                string Password = YU.IniValue("Password","DatabaseConnection");
+                string Password = YU.GetDecryptWord(YU.IniValue("Password","DatabaseConnection"));
 
                 result = YU.CheckDatabaseConnection(ServerName, DatabaseName, Username, Password);
 

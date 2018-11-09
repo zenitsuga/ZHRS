@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MyHRS.Classes;
+using System.Data.SqlClient;
 
 namespace MyHRS.Screens
 {
@@ -14,6 +15,8 @@ namespace MyHRS.Screens
     {
         clsYU yu = new clsYU();
 
+        SqlConnection sconn = new System.Data.SqlClient.SqlConnection();
+            
         public DatabaseConnection()
         {
             InitializeComponent();
@@ -31,7 +34,7 @@ namespace MyHRS.Screens
                 textBox1.Text = yu.IniValue("ServerName", "DatabaseConnection");
                 textBox2.Text = yu.IniValue("Databasename", "DatabaseConnection");
                 textBox3.Text = yu.IniValue("Username", "DatabaseConnection");
-                textBox4.Text = yu.IniValue("Password", "DatabaseConnection");
+                textBox4.Text = yu.GetDecryptWord(yu.IniValue("Password", "DatabaseConnection"));
             }
             catch(Exception ex)
             {
@@ -62,7 +65,7 @@ namespace MyHRS.Screens
 
         private void CheckDB()
         {
-            if (!yu.CheckDatabaseConnection(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text))
+            if (!yu.CheckDatabaseConnection(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text,ref sconn))
             {
                 pbStopNGo.Image = Image.FromFile(Environment.CurrentDirectory + "\\Resources\\Stop.png");
                 MessageBox.Show("Error: Cannot connect to database. Please check your creadential", "Database Connection failed :" + textBox1.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -76,7 +79,7 @@ namespace MyHRS.Screens
                 if (yu.WriteIniValue("ServerName", textBox1.Text, "DatabaseConnection"))
                     if (yu.WriteIniValue("DatabaseName", textBox2.Text, "DatabaseConnection"))
                         if (yu.WriteIniValue("Username", textBox3.Text, "DatabaseConnection"))
-                            yu.WriteIniValue("Password", textBox4.Text, "DatabaseConnection");
+                            yu.WriteIniValue("Password", yu.GetEncryptWord(textBox4.Text), "DatabaseConnection");
                 pbStopNGo.Image = Image.FromFile(Environment.CurrentDirectory + "\\Resources\\Go.png");
                 label1.Text = "CONNECTED";
             }
@@ -99,7 +102,17 @@ namespace MyHRS.Screens
 
         private void showTablesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string input = Microsoft.VisualBasic.Interaction.InputBox("Enter Access code", "Access code required", "Default", -1, -1);
+            string input = Microsoft.VisualBasic.Interaction.InputBox("Enter Access code", "Access code required", "", -1, -1);
+            if (input.ToLower() == "accessme@123")
+            {
+                DatabaseViewer dv = new DatabaseViewer();
+                dv.sqlconn = sconn;
+                dv.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Error: Invalid Access code. Please have the right code", "Invalid Code", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

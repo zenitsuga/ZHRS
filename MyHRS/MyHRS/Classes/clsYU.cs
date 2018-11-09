@@ -10,6 +10,8 @@ using System.Drawing;
 using Licensing;
 using MyHRS.Classes;
 using System.Management;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace MyHRS.Classes
 {
@@ -20,6 +22,21 @@ namespace MyHRS.Classes
 
         string m_ExePath;
         string m_LogName;
+
+        public DataTable GetDTRecords(string Query,SqlConnection sqlconn)
+        {
+            DataTable result = new DataTable();
+            try
+            {
+                cd.SQLConn = sqlconn;
+                cd.SQLType = "sql";
+                result = cd.ExecuteQuery(Query);
+            }
+            catch
+            {
+            }
+            return result;
+        }
 
         public bool WriteIniValue(string IniFields,string FieldValue, string SectionName)
         {
@@ -120,14 +137,35 @@ namespace MyHRS.Classes
             return result;
         }
 
-        public bool CheckDatabaseConnection(string ServerName,string Databasename,string Username,string Password)
+        public bool CheckDatabaseConnection(string ServerName, string Databasename, string Username, string Password)
         {
             bool result = false;
             string ErrMsg = string.Empty;
             try
             {
                 cd.SQLType = "sql";
-                result = cd.TestConnection(ServerName, Databasename, Username, Password,ref ErrMsg);
+                result = cd.TestConnection(ServerName, Databasename, Username, Password, ref ErrMsg);
+                if (!string.IsNullOrEmpty(ErrMsg))
+                {
+                    LogWrite(ErrMsg, "CheckDatabaseConnection", "Error");
+                }
+            }
+            catch (Exception ex)
+            {
+                ErrMsg = ex.Message.ToString();
+                LogWrite(ErrMsg, "CheckDatabaseConnection", "Error");
+            }
+            return result;
+        }
+
+        public bool CheckDatabaseConnection(string ServerName,string Databasename,string Username,string Password,ref SqlConnection sqlconn)
+        {
+            bool result = false;
+            string ErrMsg = string.Empty;
+            try
+            {
+                cd.SQLType = "sql";
+                result = cd.TestConnection(ServerName, Databasename, Username, Password,ref ErrMsg,ref sqlconn);
                 if (!string.IsNullOrEmpty(ErrMsg))
                 {
                     LogWrite(ErrMsg, "CheckDatabaseConnection", "Error");

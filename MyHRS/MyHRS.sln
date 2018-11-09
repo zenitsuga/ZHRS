@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHRS", "MyHRS\MyHRS.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyGen", "KeyGen\KeyGen.csproj", "{6A1EB80B-C34E-43D0-9176-6AE053552B03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZHKrypTon", "ZHKrypTon\ZHKrypTon.csproj", "{769FE7BC-CA5C-4FA4-B05B-8B2E14A8031D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +21,10 @@ Global
 		{6A1EB80B-C34E-43D0-9176-6AE053552B03}.Debug|x86.Build.0 = Debug|x86
 		{6A1EB80B-C34E-43D0-9176-6AE053552B03}.Release|x86.ActiveCfg = Release|x86
 		{6A1EB80B-C34E-43D0-9176-6AE053552B03}.Release|x86.Build.0 = Release|x86
+		{769FE7BC-CA5C-4FA4-B05B-8B2E14A8031D}.Debug|x86.ActiveCfg = Debug|x86
+		{769FE7BC-CA5C-4FA4-B05B-8B2E14A8031D}.Debug|x86.Build.0 = Debug|x86
+		{769FE7BC-CA5C-4FA4-B05B-8B2E14A8031D}.Release|x86.ActiveCfg = Release|x86
+		{769FE7BC-CA5C-4FA4-B05B-8B2E14A8031D}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -77,6 +77,12 @@
     <Compile Include="Screens\DatabaseConnection.Designer.cs">
       <DependentUpon>DatabaseConnection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\DatabaseViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\DatabaseViewer.Designer.cs">
+      <DependentUpon>DatabaseViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\SplashLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +100,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\DatabaseConnection.resx">
       <DependentUpon>DatabaseConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\DatabaseViewer.resx">
+      <DependentUpon>DatabaseViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\SplashLogin.resx">
       <DependentUpon>SplashLogin.cs</DependentUpon>
