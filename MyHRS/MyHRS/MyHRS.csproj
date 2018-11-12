@@ -83,6 +83,30 @@
     <Compile Include="Screens\DatabaseViewer.Designer.cs">
       <DependentUpon>DatabaseViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\ListModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ListModule.Designer.cs">
+      <DependentUpon>ListModule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Recruitment\ApplicantProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Recruitment\ApplicantProfile.Designer.cs">
+      <DependentUpon>ApplicantProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Recruitment\HiringProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Recruitment\HiringProcess.Designer.cs">
+      <DependentUpon>HiringProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Recruitment\Interview Management.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Recruitment\Interview Management.Designer.cs">
+      <DependentUpon>Interview Management.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\SplashLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +128,18 @@
     <EmbeddedResource Include="Screens\DatabaseViewer.resx">
       <DependentUpon>DatabaseViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ListModule.resx">
+      <DependentUpon>ListModule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Recruitment\ApplicantProfile.resx">
+      <DependentUpon>ApplicantProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Recruitment\HiringProcess.resx">
+      <DependentUpon>HiringProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Recruitment\Interview Management.resx">
+      <DependentUpon>Interview Management.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\SplashLogin.resx">
       <DependentUpon>SplashLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +153,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\new_button.png" />
+    <None Include="Resources\save_button.jpg" />
+    <None Include="Resources\edit_button.jpg" />
+    <None Include="Resources\delete_button.png" />
+    <None Include="Resources\recruitment.png" />
+    <None Include="Resources\employeeBtn.png" />
     <Content Include="Settings.ini">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

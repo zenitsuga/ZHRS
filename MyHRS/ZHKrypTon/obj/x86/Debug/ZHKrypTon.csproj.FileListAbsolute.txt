@@ -1,3 +1,11 @@
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\obj\x86\Debug\ZHKrypTon.Form1.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\obj\x86\Debug\ZHKrypTon.Properties.Resources.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\obj\x86\Debug\ZHKrypTon.csproj.GenerateResource.Cache
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\obj\x86\Debug\ZHKrypTon.csprojResolveAssemblyReference.cache
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\bin\Debug\Resources\BG.PNG
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\bin\Debug\ZHKrypTon.exe
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\bin\Debug\ZHKrypTon.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\bin\Debug\Licensing.dll
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\bin\Debug\Licensing.pdb
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\obj\x86\Debug\ZHKrypTon.exe
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\ZHKrypTon\obj\x86\Debug\ZHKrypTon.pdb

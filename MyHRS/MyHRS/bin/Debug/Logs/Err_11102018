@@ -1,0 +1,2 @@
+Error:	11-10-2018 10:34:49:	CheckDatabaseConnection:	A connection was successfully established with the server, but then an error occurred during the pre-login handshake. (provider: TCP Provider, error: 0 - The specified network name is no longer available.)
+Error:	11-10-2018 10:34:58:	Database Connection:	Cannot connect to database

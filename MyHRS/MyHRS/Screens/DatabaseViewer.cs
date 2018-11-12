@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using MyHRS.Classes;
+using System.Text.RegularExpressions;
 
 namespace MyHRS.Screens
 {
@@ -128,11 +129,26 @@ namespace MyHRS.Screens
                     return;
                 }
 
-                
-
                 DataTable dtResult = new DataTable();
-                string SelectQuery = "Select * from " + ;
-                dtResult = YU.GetDTRecords(SelectQuery, sqlconn);
+
+                string SelectQuery = textBox1.Text;
+
+                string GetTableName = string.Empty;
+
+                if (SelectQuery.ToLower().Contains(" from ") && SelectQuery.ToLower().Contains("select"))
+                {
+                    dtResult = YU.GetDTRecords(SelectQuery, sqlconn);
+                }
+                else
+                {
+                    if (SelectQuery.ToLower().Contains(" into "))
+                    {
+                        GetTableName = Regex.Match(SelectQuery, @"\sinto\s(\w+)\s", RegexOptions.IgnoreCase).Groups[1].Value.ToString();
+                    }
+                    dtResult = YU.GetDTRecords("Select * from " + GetTableName, sqlconn);
+                }
+                dataGridView1.DataSource = dtResult;
+                
             }
             catch
             {
