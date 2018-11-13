@@ -8,11 +8,17 @@ using System.Text;
 using System.Windows.Forms;
 using MyHRS.Screens;
 using MyHRS.Screens.Recruitment;
+using System.Data.SqlClient;
+using MyHRS.Classes;
 
 namespace MyHRS
 {
     public partial class Form1 : Form
     {
+        clsFunctions cf = new clsFunctions();        
+
+        public SqlConnection Sconn;
+        
         public Form1()
         {
             InitializeComponent();
@@ -20,8 +26,9 @@ namespace MyHRS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //SplashLogin sp = new SplashLogin();
-            //sp.ShowDialog();
+            SplashLogin sp = new SplashLogin();
+            sp.ShowDialog();
+            Sconn = sp.Sconn;
         }
 
         private void databaseConnectionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,6 +43,8 @@ namespace MyHRS
             ap.MdiParent = this;
             ap.Top = 0;
             ap.Left = 0;
+            ap.Sconn = Sconn;
+            if(cf.isChildFormLoaded(ap.Name))    
             ap.Show();
         }
 
@@ -46,6 +55,7 @@ namespace MyHRS
             im.StartPosition = FormStartPosition.Manual;
             im.Top = 0;
             im.Left = 0;
+            if (cf.isChildFormLoaded(im.Name))
             im.Show();
         }
 
@@ -56,6 +66,7 @@ namespace MyHRS
             hp.StartPosition = FormStartPosition.Manual;
             hp.Top = 0;
             hp.Left = 0;
+            if (cf.isChildFormLoaded(hp.Name))
             hp.Show();
         }
     }

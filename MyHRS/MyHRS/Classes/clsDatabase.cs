@@ -87,6 +87,32 @@ namespace MyHRS.Classes
             }
             return result;
         }
+        public DataTable ExecuteSP(string SPName)
+        {
+            DataTable dtResult = new DataTable();
+            try
+            {
+                if (SQLType.ToLower() == "sql")
+                {
+                    if (SQLConn.State == ConnectionState.Open)
+                    {
+                        SQLConn.Close();
+                    }
+                    SQLConn.Open();
+                    if (SQLConn.State == ConnectionState.Open)
+                    {
+                        SqlCommand sqlcmd = new SqlCommand(SPName, SQLConn);
+                        sqlcmd.CommandType = CommandType.StoredProcedure;
+                        SqlDataAdapter sda = new SqlDataAdapter(sqlcmd);
+                        sda.Fill(dtResult);
+                    }
+                } 
+            }
+            catch
+            {
+            }
+            return dtResult;
+        }
         public DataTable ExecuteQuery(string SQLStatement)
         {
             DataTable dtResult = new DataTable();

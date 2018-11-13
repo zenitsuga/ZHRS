@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelPersonalInfo = new System.Windows.Forms.Panel();
-            this.btnPersonalInfo = new System.Windows.Forms.Button();
             this.panelStatus = new System.Windows.Forms.Panel();
             this.btnStatus = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.panelPersonalInfo = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnPersonalInfo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelPersonalInfo.SuspendLayout();
             this.panelStatus.SuspendLayout();
+            this.panelPersonalInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,6 +61,29 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Applicant Here";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(6, 42);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(188, 427);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 20);
+            this.textBox1.TabIndex = 0;
             // 
             // statusStrip1
             // 
@@ -83,29 +106,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Record(s)";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(6, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
-            this.textBox1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 42);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(188, 427);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -118,37 +118,12 @@
             this.panel1.Size = new System.Drawing.Size(604, 412);
             this.panel1.TabIndex = 0;
             // 
-            // panelPersonalInfo
-            // 
-            this.panelPersonalInfo.Controls.Add(this.textBox3);
-            this.panelPersonalInfo.Controls.Add(this.label2);
-            this.panelPersonalInfo.Controls.Add(this.textBox2);
-            this.panelPersonalInfo.Controls.Add(this.label1);
-            this.panelPersonalInfo.Controls.Add(this.btnPersonalInfo);
-            this.panelPersonalInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPersonalInfo.Location = new System.Drawing.Point(0, 0);
-            this.panelPersonalInfo.Name = "panelPersonalInfo";
-            this.panelPersonalInfo.Size = new System.Drawing.Size(604, 299);
-            this.panelPersonalInfo.TabIndex = 0;
-            // 
-            // btnPersonalInfo
-            // 
-            this.btnPersonalInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnPersonalInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPersonalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPersonalInfo.Location = new System.Drawing.Point(3, 3);
-            this.btnPersonalInfo.Name = "btnPersonalInfo";
-            this.btnPersonalInfo.Size = new System.Drawing.Size(601, 23);
-            this.btnPersonalInfo.TabIndex = 0;
-            this.btnPersonalInfo.Text = "Personal Info";
-            this.btnPersonalInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPersonalInfo.UseVisualStyleBackColor = false;
-            this.btnPersonalInfo.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panelStatus
             // 
+            this.panelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelStatus.Controls.Add(this.btnStatus);
-            this.panelStatus.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelStatus.Location = new System.Drawing.Point(0, 299);
             this.panelStatus.Name = "panelStatus";
             this.panelStatus.Size = new System.Drawing.Size(604, 110);
@@ -168,21 +143,20 @@
             this.btnStatus.UseVisualStyleBackColor = false;
             this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
-            // label1
+            // panelPersonalInfo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Lastname:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(64, 30);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 2;
+            this.panelPersonalInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPersonalInfo.Controls.Add(this.textBox3);
+            this.panelPersonalInfo.Controls.Add(this.label2);
+            this.panelPersonalInfo.Controls.Add(this.textBox2);
+            this.panelPersonalInfo.Controls.Add(this.label1);
+            this.panelPersonalInfo.Controls.Add(this.btnPersonalInfo);
+            this.panelPersonalInfo.Location = new System.Drawing.Point(0, 0);
+            this.panelPersonalInfo.Name = "panelPersonalInfo";
+            this.panelPersonalInfo.Size = new System.Drawing.Size(604, 299);
+            this.panelPersonalInfo.TabIndex = 0;
             // 
             // textBox3
             // 
@@ -200,6 +174,36 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Lastname:";
             // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(64, 30);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(188, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Lastname:";
+            // 
+            // btnPersonalInfo
+            // 
+            this.btnPersonalInfo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnPersonalInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPersonalInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPersonalInfo.Location = new System.Drawing.Point(3, 3);
+            this.btnPersonalInfo.Name = "btnPersonalInfo";
+            this.btnPersonalInfo.Size = new System.Drawing.Size(601, 23);
+            this.btnPersonalInfo.TabIndex = 0;
+            this.btnPersonalInfo.Text = "Personal Info";
+            this.btnPersonalInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPersonalInfo.UseVisualStyleBackColor = false;
+            this.btnPersonalInfo.Click += new System.EventHandler(this.button1_Click);
+            // 
             // HiringProcess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,12 +216,12 @@
             this.Text = "Hiring Process";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panelStatus.ResumeLayout(false);
             this.panelPersonalInfo.ResumeLayout(false);
             this.panelPersonalInfo.PerformLayout();
-            this.panelStatus.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -45,3 +45,5 @@ E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitm
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.Interview_Management.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.ListModule.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.HiringProcess.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.Educational_Background.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.Examination_Information.resources

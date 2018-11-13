@@ -9,11 +9,14 @@ using System.Windows.Forms;
 using System.Threading;
 using MyHRS.Classes;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace MyHRS.Screens
 {
     public partial class SplashLogin : Form
     {
+        public SqlConnection Sconn;
+
         string AccessCode = "ZHRMIS";
         string SystemCode = "ZHRMIS";
 
@@ -135,7 +138,10 @@ namespace MyHRS.Screens
                 string Password = YU.GetDecryptWord(YU.IniValue("Password","DatabaseConnection"));
 
                 result = YU.CheckDatabaseConnection(ServerName, DatabaseName, Username, Password);
-
+                if (result)
+                {
+                    YU.CheckDatabaseConnection(ServerName, DatabaseName, Username, Password, ref Sconn);
+                }
             }
             catch
             {
