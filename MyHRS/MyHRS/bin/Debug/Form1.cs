@@ -41,6 +41,7 @@ namespace MyHRS
         {
             ApplicantProfile ap = new ApplicantProfile();
             ap.MdiParent = this;
+            ap.WindowState = FormWindowState.Maximized;
             ap.Top = 0;
             ap.Left = 0;
             ap.Sconn = Sconn;
