@@ -65,6 +65,36 @@ namespace MyHRS.Screens.Recruitment
         {
 
         }
+
+        private void ClearTextbox()
+        {
+            foreach (Control ctrlpanel in groupBox2.Controls)
+            {
+                if (ctrlpanel.GetType().Name.ToString() == "Panel")
+                {
+                    foreach (Control tbPanel in ctrlpanel.Controls)
+                    {
+                        if (tbPanel.GetType().Name.ToString() == "Panel")
+                        {
+                            if (tbPanel.Name.Contains("_"))
+                            {
+                                foreach (Control TbCtrl in tbPanel.Controls)
+                                {
+                                    if (TbCtrl.GetType().Name.ToString().ToLower() == "textbox")
+                                    {
+                                        TextBox tb = (TextBox)TbCtrl;
+                                        tb.Text = string.Empty;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            tbPerAdd_Street.Text = tbPerAdd_Brgy.Text = tbPerAdd_City.Text = tbPerAdd_Postal.Text = string.Empty;
+            tbPreAdd_Street.Text = tbPreAdd_Brgy.Text = tbPreAdd_City.Text = tbPreAdd_Postal.Text = string.Empty;
+        }
+
         private void BtnEntry(bool status)
         {
             try
@@ -158,6 +188,8 @@ namespace MyHRS.Screens.Recruitment
             BtnEntry(false);
         }
 
+
+
         private void btnNew_Click(object sender, EventArgs e)
         {
             DialogResult dr = MessageBox.Show("Are you sure you want to create a new transaction?", "Create New Profile", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -227,7 +259,10 @@ namespace MyHRS.Screens.Recruitment
            if (dr == DialogResult.Yes)
            {
                List<PersonalProfile> PersonalProfile = new List<PersonalProfile>();
-               PersonalProfile pp = new PersonalProfile();
+               PersonalProfile pp = new PersonalProfile();             
+               pp.applicationDate = dtApplicationDate.Value;
+               pp.applicationStatus = int.Parse(cf.GetComboID(cmbApplicantStatus).ToString());
+               pp.applicationType = int.Parse(cf.GetComboID(cmbApplicationType).ToString());
                    pp.Lastname = tbLastName.Text;
                    pp.Firstname = tbFirstName.Text;
                    pp.Middlename = tbMiddleName.Text;
@@ -271,6 +306,7 @@ namespace MyHRS.Screens.Recruitment
                        cf.ControlObjects(false, groupBox2);
                        LoadAllCombos();
                        BtnEntry(false);
+                       ClearTextbox();
                    }
                }
            }
@@ -315,6 +351,38 @@ namespace MyHRS.Screens.Recruitment
                 tbPerAdd_Street.Text = tbPreAdd_Street.Text;
                 tbPerAdd_Brgy.Text = tbPreAdd_Brgy.Text;
                 tbPerAdd_City.Text = tbPreAdd_City.Text;
+                tbPerAdd_Postal.Text = tbPreAdd_Postal.Text;
+            }
+        }
+
+        private void tbPreAdd_Street_TextChanged(object sender, EventArgs e)
+        {
+            if (chkSamePermanent.Checked)
+            {
+                tbPerAdd_Street.Text = tbPreAdd_Street.Text;
+            }
+        }
+
+        private void tbPreAdd_Brgy_TextChanged(object sender, EventArgs e)
+        {
+            if (chkSamePermanent.Checked)
+            {
+                tbPerAdd_Brgy.Text = tbPreAdd_Brgy.Text;
+            }
+        }
+
+        private void tbPreAdd_City_TextChanged(object sender, EventArgs e)
+        {
+            if (chkSamePermanent.Checked)
+            {
+                tbPerAdd_City.Text = tbPreAdd_City.Text;
+            }
+        }
+
+        private void tbPreAdd_Postal_TextChanged(object sender, EventArgs e)
+        {
+            if (chkSamePermanent.Checked)
+            {
                 tbPerAdd_Postal.Text = tbPreAdd_Postal.Text;
             }
         }

@@ -41,6 +41,9 @@ namespace MyHRS.Classes
         public string Permanent_Address_brgy { get; set; }
         public string Permanent_Address_city { get; set; }
         public string Permanent_Address_postal { get; set; }
+        public int applicationType { get; set; }
+        public int applicationStatus { get; set; }
+        public DateTime applicationDate { get; set; }
     }
     public class clsVariable
     {

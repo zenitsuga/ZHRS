@@ -97,11 +97,23 @@
     <Compile Include="Screens\Recruitment\ApplicantProfile.Designer.cs">
       <DependentUpon>ApplicantProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Recruitment\Applicant_Masterlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Recruitment\Applicant_Masterlist.Designer.cs">
+      <DependentUpon>Applicant_Masterlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Recruitment\Educational_Background.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Recruitment\Educational_Background.Designer.cs">
       <DependentUpon>Educational_Background.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Recruitment\EmployeeEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Recruitment\EmployeeEvaluation.Designer.cs">
+      <DependentUpon>EmployeeEvaluation.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Recruitment\Examination_Information.cs">
       <SubType>Form</SubType>
@@ -148,8 +160,14 @@
     <EmbeddedResource Include="Screens\Recruitment\ApplicantProfile.resx">
       <DependentUpon>ApplicantProfile.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Recruitment\Applicant_Masterlist.resx">
+      <DependentUpon>Applicant_Masterlist.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Recruitment\Educational_Background.resx">
       <DependentUpon>Educational_Background.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Recruitment\EmployeeEvaluation.resx">
+      <DependentUpon>EmployeeEvaluation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Recruitment\Examination_Information.resx">
       <DependentUpon>Examination_Information.cs</DependentUpon>

@@ -37,7 +37,13 @@
             this.databaseConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.employeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tssRecruitment = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterlistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sourcingAndApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.applicationScreeningAndInterviewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tssEmployee = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,7 +63,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.btnAbout = new System.Windows.Forms.Button();
+            this.Menu_Recruitment_Masterlist = new System.Windows.Forms.Button();
             this.lblMenu = new System.Windows.Forms.Label();
             this.btnMenuGroup2 = new System.Windows.Forms.Button();
             this.btnMenuGroup1 = new System.Windows.Forms.Button();
@@ -80,8 +86,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.employeesToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.tssRecruitment,
+            this.tssEmployee});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(886, 24);
@@ -132,11 +139,64 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
-            // employeesToolStripMenuItem
+            // tssRecruitment
             // 
-            this.employeesToolStripMenuItem.Name = "employeesToolStripMenuItem";
-            this.employeesToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.employeesToolStripMenuItem.Text = "&Employees";
+            this.tssRecruitment.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masterlistsToolStripMenuItem,
+            this.sourcingAndApplicationToolStripMenuItem,
+            this.applicationScreeningAndInterviewToolStripMenuItem,
+            this.evaluationToolStripMenuItem});
+            this.tssRecruitment.Name = "tssRecruitment";
+            this.tssRecruitment.Size = new System.Drawing.Size(84, 20);
+            this.tssRecruitment.Text = "Recruitment";
+            this.tssRecruitment.Visible = false;
+            // 
+            // masterlistsToolStripMenuItem
+            // 
+            this.masterlistsToolStripMenuItem.Name = "masterlistsToolStripMenuItem";
+            this.masterlistsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F3;
+            this.masterlistsToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.masterlistsToolStripMenuItem.Text = "Masterlists";
+            this.masterlistsToolStripMenuItem.Click += new System.EventHandler(this.masterlistsToolStripMenuItem_Click);
+            // 
+            // sourcingAndApplicationToolStripMenuItem
+            // 
+            this.sourcingAndApplicationToolStripMenuItem.Name = "sourcingAndApplicationToolStripMenuItem";
+            this.sourcingAndApplicationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.sourcingAndApplicationToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.sourcingAndApplicationToolStripMenuItem.Text = "Sourcing and Application";
+            this.sourcingAndApplicationToolStripMenuItem.Click += new System.EventHandler(this.sourcingAndApplicationToolStripMenuItem_Click);
+            // 
+            // applicationScreeningAndInterviewToolStripMenuItem
+            // 
+            this.applicationScreeningAndInterviewToolStripMenuItem.Name = "applicationScreeningAndInterviewToolStripMenuItem";
+            this.applicationScreeningAndInterviewToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F2)));
+            this.applicationScreeningAndInterviewToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.applicationScreeningAndInterviewToolStripMenuItem.Text = "Application Screening and Interview";
+            this.applicationScreeningAndInterviewToolStripMenuItem.Click += new System.EventHandler(this.applicationScreeningAndInterviewToolStripMenuItem_Click);
+            // 
+            // evaluationToolStripMenuItem
+            // 
+            this.evaluationToolStripMenuItem.Name = "evaluationToolStripMenuItem";
+            this.evaluationToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F4)));
+            this.evaluationToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.evaluationToolStripMenuItem.Text = "Evaluation";
+            this.evaluationToolStripMenuItem.Click += new System.EventHandler(this.evaluationToolStripMenuItem_Click);
+            // 
+            // tssEmployee
+            // 
+            this.tssEmployee.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.masterlistToolStripMenuItem});
+            this.tssEmployee.Name = "tssEmployee";
+            this.tssEmployee.Size = new System.Drawing.Size(76, 20);
+            this.tssEmployee.Text = "&Employees";
+            this.tssEmployee.Visible = false;
+            // 
+            // masterlistToolStripMenuItem
+            // 
+            this.masterlistToolStripMenuItem.Name = "masterlistToolStripMenuItem";
+            this.masterlistToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.masterlistToolStripMenuItem.Text = "Masterlist";
             // 
             // aboutToolStripMenuItem
             // 
@@ -152,25 +212,25 @@
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.helpToolStripMenuItem.Text = "&Help";
             // 
             // systemToolStripMenuItem
             // 
             this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
-            this.systemToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.systemToolStripMenuItem.Text = "&System";
             // 
             // companyToolStripMenuItem
             // 
             this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
-            this.companyToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.companyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.companyToolStripMenuItem.Text = "&Company";
             // 
             // registrationToolStripMenuItem
             // 
             this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
-            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.registrationToolStripMenuItem.Text = "&Registration";
             // 
             // pnlMenu
@@ -313,7 +373,7 @@
             this.pnlMenuGroup1.Controls.Add(this.button1);
             this.pnlMenuGroup1.Controls.Add(this.button3);
             this.pnlMenuGroup1.Controls.Add(this.button2);
-            this.pnlMenuGroup1.Controls.Add(this.btnAbout);
+            this.pnlMenuGroup1.Controls.Add(this.Menu_Recruitment_Masterlist);
             this.pnlMenuGroup1.Controls.Add(this.btnMenuGroup1);
             this.pnlMenuGroup1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMenuGroup1.Location = new System.Drawing.Point(0, 23);
@@ -366,19 +426,20 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnAbout
+            // Menu_Recruitment_Masterlist
             // 
-            this.btnAbout.BackColor = System.Drawing.Color.Silver;
-            this.btnAbout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbout.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbout.Location = new System.Drawing.Point(0, 50);
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(200, 25);
-            this.btnAbout.TabIndex = 1;
-            this.btnAbout.Text = "Job Analysis";
-            this.btnAbout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAbout.UseVisualStyleBackColor = false;
+            this.Menu_Recruitment_Masterlist.BackColor = System.Drawing.Color.Silver;
+            this.Menu_Recruitment_Masterlist.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Menu_Recruitment_Masterlist.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.Menu_Recruitment_Masterlist.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Menu_Recruitment_Masterlist.Location = new System.Drawing.Point(0, 50);
+            this.Menu_Recruitment_Masterlist.Name = "Menu_Recruitment_Masterlist";
+            this.Menu_Recruitment_Masterlist.Size = new System.Drawing.Size(200, 25);
+            this.Menu_Recruitment_Masterlist.TabIndex = 1;
+            this.Menu_Recruitment_Masterlist.Text = "Masterlists";
+            this.Menu_Recruitment_Masterlist.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Menu_Recruitment_Masterlist.UseVisualStyleBackColor = false;
+            this.Menu_Recruitment_Masterlist.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // lblMenu
             // 
@@ -462,7 +523,7 @@
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem employeesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tssEmployee;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem companyToolStripMenuItem;
@@ -484,10 +545,16 @@
         private System.Windows.Forms.Panel pnlMenuGroup1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAbout;
+        private System.Windows.Forms.Button Menu_Recruitment_Masterlist;
         private System.Windows.Forms.Button btnMenuGroup1;
         private System.Windows.Forms.Label lblMenu;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem masterlistToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tssRecruitment;
+        private System.Windows.Forms.ToolStripMenuItem masterlistsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sourcingAndApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem applicationScreeningAndInterviewToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem evaluationToolStripMenuItem;
     }
 }
 

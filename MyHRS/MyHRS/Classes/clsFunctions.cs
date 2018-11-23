@@ -14,7 +14,25 @@ namespace MyHRS.Classes
         clsDatabase cd = new clsDatabase();
 
         public Form frm;
+        public string Username;
         public SqlConnection SQLConn;
+
+        #region ShowApplicant
+
+        public DataTable dtGetApplicantlist()
+        {
+            DataTable dtRecords = new DataTable();
+            try
+            {
+                dtRecords = dtGetSelectRecords("exec sp_GetApplicantList 'ALL'");
+            }
+            catch
+            {
+            }
+            return dtRecords;
+        }
+
+        #endregion
 
         #region SaveRecords
 
@@ -23,56 +41,59 @@ namespace MyHRS.Classes
             bool result = false;
             try
             {
-                string SQLQuery = "declare @p6 int " +
-                                  "  set @p6=1 " +
-                                  "  exec spApplicantInfo_SaveUpdate " +
-                                  "  @FormAction=N'Add', " +
-                                  "  @id=N'', " +
-                                  "  @LastName=N'Santos', " +
-                                  "  @FirstName=N'Erwan', " +
-                                  "  @MiddleName=N'Lacsamana', " +
-                                  "  @Suffix=18, " +
-                                  "  @EmailAddress=N'test@test.com', " +
-                                  "  @CivilStatus=1, " +
-                                  "  @gender=1, " +
-                                  "  @Nationality=1, " +
-                                  "  @BirthDate=N'01 Jan 86', " +
-                                  "  @BirthPlace=N'Muntinlupa', " +
-                                  "  @MobileNumber1=N'09123456789', " +
-                                  "  @MobileNumber2=N'', " +
-                                  "  @MobileNumber3=N'', " +
-                                  "  @PhoneNumber=N'', " +
-                                  "  @religion=1, " +
-                                  "  @Height=N'', " +
-                                  "  @Weight=N'', " +
-                                  "  @BloodType=1, " +
-                                  "  @MarriageDate=N'22 Jun 2005', " +
-                                  "  @MarriagePlace=N'Alabang', " +
-                                  "  @PresentAddressStreet=N'123 Rizal St.', " +
-                                  "  @PresentAddressBrgy=N'Brgy. San Juan', " +
-                                  "  @PresentAddressCity=N'Muntinlupa', " +
-                                  "  @PresentAddressPostal=N'1808', " +
-                                  "  @PermanentAddressStreet=N'123 Rizal St.', " +
-                                  "  @PermanentAddressBrgy=N'Brgy. San Juan', " +
-                                  "  @PermanentAddressCity=N'Muntinlupa', " +
-                                  "  @PermanentAddressPostal=N'1808', " +
-                                  "  @ApplicationDate=N'04 Mar 18', " +
-                                  "  @Application_Type=1, " +
-                                  "  @Applicant_Status=1, " +
-                                  "  @CreatedBy=N'layla', " +
-                                  "  @ModifiedDate=N'20 Nov 18', " +
-                                  "  @ModifyBy=N'layla', " +
-                                  "  @newID=@p6 output " +
-                                  "  select @p6";
-               DataTable dtResult = cd.ExecuteQuery(SQLQuery);
-               if (isInteger(dtResult.Rows[0][0].ToString()))
-               {
-                   int ResultID = int.Parse(dtResult.Rows[0][0].ToString());
-                   if (ResultID > 0)
+                foreach(PersonalProfile PerPro in PP)
+                {
+                    string SQLQuery = "declare @p6 int " +
+                                      "  set @p6=1 " +
+                                      "  exec spApplicantInfo_SaveUpdate " +
+                                      "  @FormAction=N'Add', " +
+                                      "  @id=N'', " +
+                                      "  @LastName=N'" + PerPro.Lastname + "', " +
+                                      "  @FirstName=N'" + PerPro.Firstname + "', " +
+                                      "  @MiddleName=N'" + PerPro.Middlename + "', " +
+                                      "  @Suffix=" + PerPro.suffix + ", " +
+                                      "  @EmailAddress=N'" + PerPro.EmailAddress + "', " +
+                                      "  @CivilStatus=" + PerPro.CivilStaus + ", " +
+                                      "  @gender=" + PerPro.Gender + ", " +
+                                      "  @Nationality=" + PerPro.Nationality + ", " +
+                                      "  @BirthDate=N'" + PerPro.BirthDate + "', " +
+                                      "  @BirthPlace=N'" + PerPro.BirthPlace + "', " +
+                                      "  @MobileNumber1=N'" + PerPro.MobileNumber1 + "', " +
+                                      "  @MobileNumber2=N'" + PerPro.MobileNumber2 + "', " +
+                                      "  @MobileNumber3=N'" + PerPro.MobileNumber3 + "', " +
+                                      "  @PhoneNumber=N'" + PerPro.PhoneNumber +"', " +
+                                      "  @religion="+ PerPro.Religion +", " +
+                                      "  @Height=N'"+ PerPro.Height +"', " +
+                                      "  @Weight=N'"+ PerPro.Weight +"', " +
+                                      "  @BloodType="+ PerPro.BloodType +", " +
+                                      "  @MarriageDate=N'"+ PerPro.Marriage_Date +"', " +
+                                      "  @MarriagePlace=N'"+ PerPro.Marriage_Place +"', " +
+                                      "  @PresentAddressStreet=N'"+ PerPro.Present_Address_street +"', " +
+                                      "  @PresentAddressBrgy=N'"+ PerPro.Present_Address_brgy +"', " +
+                                      "  @PresentAddressCity=N'"+ PerPro.Present_Address_city +"', " +
+                                      "  @PresentAddressPostal=N'"+ PerPro.Present_Address_postal +"', " +
+                                      "  @PermanentAddressStreet=N'"+ PerPro.Permanent_Address_street +"', " +
+                                      "  @PermanentAddressBrgy=N'"+ PerPro.Permanent_Address_brgy +"', " +
+                                      "  @PermanentAddressCity=N'"+ PerPro.Permanent_Address_city +"', " +
+                                      "  @PermanentAddressPostal=N'"+ PerPro.Permanent_Address_postal +"', " +
+                                      "  @ApplicationDate=N'"+ PerPro.applicationDate +"', " +
+                                      "  @Application_Type="+ PerPro.applicationType +", " +
+                                      "  @Applicant_Status="+ PerPro.applicationStatus +", " +
+                                      "  @CreatedBy=N'" + (string.IsNullOrEmpty(Username) ? Username : "system") + "', " +
+                                      "  @ModifiedDate=N'', " +
+                                      "  @ModifyBy=N'"+ (string.IsNullOrEmpty(Username) ? Username:"system")  +"', " +
+                                      "  @newID=@p6 output " +
+                                      "  select @p6";
+                   DataTable dtResult = cd.ExecuteQuery(SQLQuery);
+                   if (isInteger(dtResult.Rows[0][0].ToString()))
                    {
-                       result = true;
+                       int ResultID = int.Parse(dtResult.Rows[0][0].ToString());
+                       if (ResultID > 0)
+                       {
+                           result = true;
+                       }
                    }
-               }
+                }
             }
             catch
             {
@@ -96,6 +117,21 @@ namespace MyHRS.Classes
             {
             }
             return result;
+        }
+
+        public DataTable dtGetSelectRecords(string Query)
+        {
+            DataTable dtResult = new DataTable();
+            try
+            {
+                cd.SQLConn = SQLConn;
+                cd.SQLType = "sql";
+                dtResult = cd.ExecuteQuery(Query);
+            }
+            catch
+            {
+            }
+            return dtResult;
         }
 
         public DataTable dtGetSelectRecord(string SPName)
@@ -375,6 +411,42 @@ namespace MyHRS.Classes
             }
             return dtResult;
         }
+        #endregion
+
+        #region Applicant Search
+
+        public void TextboxEvent(Form FrmName)
+        {
+            try
+            {
+                foreach (Control ctrl in FrmName.Controls)
+                {
+                    if (ctrl is GroupBox)
+                    {
+                        GroupBox gb = (GroupBox)ctrl;
+                        foreach (Control cgb in gb.Controls)
+                        {
+                            if (cgb is TextBox)
+                            {
+                                TextBox tb = (TextBox)cgb;
+                                tb.Enter +=new EventHandler(tb_Enter);
+                                tb.Leave +=new EventHandler(tb_Leave);
+                            }
+                        }
+                    }
+                    else if (ctrl is TextBox)
+                    {
+                        TextBox tb = (TextBox)ctrl;
+                        tb.Enter += new EventHandler(tb_Enter);
+                        tb.Leave += new EventHandler(tb_Leave);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
         #endregion
     }
 }

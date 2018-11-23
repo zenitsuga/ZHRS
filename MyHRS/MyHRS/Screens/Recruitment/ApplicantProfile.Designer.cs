@@ -740,6 +740,7 @@
             this.tbPreAdd_Postal.Name = "tbPreAdd_Postal";
             this.tbPreAdd_Postal.Size = new System.Drawing.Size(91, 20);
             this.tbPreAdd_Postal.TabIndex = 52;
+            this.tbPreAdd_Postal.TextChanged += new System.EventHandler(this.tbPreAdd_Postal_TextChanged);
             this.tbPreAdd_Postal.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPreAdd_Postal_KeyDown);
             // 
             // label34
@@ -757,6 +758,7 @@
             this.tbPreAdd_City.Name = "tbPreAdd_City";
             this.tbPreAdd_City.Size = new System.Drawing.Size(221, 20);
             this.tbPreAdd_City.TabIndex = 50;
+            this.tbPreAdd_City.TextChanged += new System.EventHandler(this.tbPreAdd_City_TextChanged);
             this.tbPreAdd_City.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPreAdd_City_KeyDown);
             // 
             // label33
@@ -774,6 +776,7 @@
             this.tbPreAdd_Brgy.Name = "tbPreAdd_Brgy";
             this.tbPreAdd_Brgy.Size = new System.Drawing.Size(196, 20);
             this.tbPreAdd_Brgy.TabIndex = 48;
+            this.tbPreAdd_Brgy.TextChanged += new System.EventHandler(this.tbPreAdd_Brgy_TextChanged);
             this.tbPreAdd_Brgy.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPreAdd_Brgy_KeyDown);
             // 
             // label32
@@ -791,6 +794,7 @@
             this.tbPreAdd_Street.Name = "tbPreAdd_Street";
             this.tbPreAdd_Street.Size = new System.Drawing.Size(196, 20);
             this.tbPreAdd_Street.TabIndex = 46;
+            this.tbPreAdd_Street.TextChanged += new System.EventHandler(this.tbPreAdd_Street_TextChanged);
             this.tbPreAdd_Street.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbPreAdd_Street_KeyDown);
             // 
             // label31
