@@ -81,7 +81,7 @@ namespace MyHRS.Screens.Recruitment
                 dataGridView1.Refresh();
                 cf.SQLConn = Sconn;
                 DataTable dtApplicantRecords = new DataTable();
-                dtApplicantRecords = cf.dtGetApplicantlist();
+                dtApplicantRecords = cf.dtGetApplicantlist(0);
                 if(dtApplicantRecords.Rows.Count >0)
                 {
                     DataTable dtApplicantInformation = new DataTable();

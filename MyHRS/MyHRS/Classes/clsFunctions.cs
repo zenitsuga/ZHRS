@@ -19,12 +19,33 @@ namespace MyHRS.Classes
 
         #region ShowApplicant
 
-        public DataTable dtGetApplicantlist()
+        public DataTable dtGetApplicantRecord(int ID)
+        {
+            DataTable dtRecords = new DataTable();
+            try
+            {
+                dtRecords = dtGetSelectRecords("exec sp_GetApplicantListLoadRecord '" + ID + "'");
+            }
+            catch
+            {
+            }
+            return dtRecords;
+        }
+        public DataTable dtGetApplicantlist(int ID)
         {
             DataTable dtRecords = new DataTable();
             try
             {
                 dtRecords = dtGetSelectRecords("exec sp_GetApplicantList 'ALL'");
+                if (ID > 0)
+                {
+                    DataView dvViewRecord = new DataView(dtRecords);
+                    dvViewRecord.RowFilter = "id=" + ID;
+                    if (dvViewRecord.ToTable().Rows.Count == 1)
+                    {
+                        dtRecords = dvViewRecord.ToTable();
+                    }
+                }
             }
             catch
             {
@@ -36,7 +57,7 @@ namespace MyHRS.Classes
 
         #region SaveRecords
 
-        public bool SaveApplicant(List<PersonalProfile> PP)
+        public bool SaveApplicant(List<PersonalProfile> PP,string instruction)
         {
             bool result = false;
             try
@@ -46,7 +67,7 @@ namespace MyHRS.Classes
                     string SQLQuery = "declare @p6 int " +
                                       "  set @p6=1 " +
                                       "  exec spApplicantInfo_SaveUpdate " +
-                                      "  @FormAction=N'Add', " +
+                                      "  @FormAction=N'"+ instruction +"', " +
                                       "  @id=N'', " +
                                       "  @LastName=N'" + PerPro.Lastname + "', " +
                                       "  @FirstName=N'" + PerPro.Firstname + "', " +
@@ -112,6 +133,21 @@ namespace MyHRS.Classes
             {
                 DataRowView drv = (DataRowView)cmb.SelectedItem;
                 result = isInteger(drv["id"].ToString()) ? int.Parse(drv["id"].ToString()):0;
+            }
+            catch
+            {
+            }
+            return result;
+        }
+
+        public bool executeSP(string SPName)
+        {
+            bool result = false;
+            try
+            {
+                cd.SQLConn = SQLConn;
+                cd.SQLType = "sql";
+                result = cd.ExecuteNonQuery(SPName);
             }
             catch
             {
@@ -361,9 +397,57 @@ namespace MyHRS.Classes
             }
         }
 
+        public void clearTextboxEvent(Form FrmName)
+        {
+            try
+            {
+                foreach (Control ctrl in FrmName.Controls)
+                {
+                    if (ctrl is GroupBox)
+                    {
+                        GroupBox gb = (GroupBox)ctrl;
+                        foreach (Control cgb in gb.Controls)
+                        {
+                            if (cgb is TextBox)
+                            {
+                                TextBox tb = (TextBox)cgb;
+                                tb.Text = string.Empty;
+                            }
+                        }
+                    }
+                    else if (ctrl is TextBox)
+                    {
+                        TextBox tb = (TextBox)ctrl;
+                        tb.Text = string.Empty;
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
         #endregion
 
         #region Application_Profile
+        public bool checkID(int ID)
+        {
+            bool result = false;
+            try
+            {
+                cd.SQLConn = SQLConn;
+                cd.SQLType = "sql";
+                DataTable dtResult = cd.ExecuteQuery("exec sp_GetApplicantListLoadRecord '" + ID + "'");
+                if (dtResult.Rows.Count == 1)
+                {
+                    result = true;
+                }
+            }
+            catch
+            {
+            }
+            return result;
+        }
         public int GetNewID()
         {
             int result = 0;
@@ -371,10 +455,14 @@ namespace MyHRS.Classes
             {
                 cd.SQLConn = SQLConn;
                 cd.SQLType = "sql";
-                DataTable dtResult = cd.ExecuteSP("sp_GetApplicant_Status");
+                DataTable dtResult = cd.ExecuteQuery("exec sp_GetapplicantList 'All'");
                 if (dtResult.Rows.Count > 0)
                 {
-                    result = isInteger(dtResult.Rows[0][0].ToString()) ? int.Parse(dtResult.Rows[0][0].ToString()):0;
+                    result = isInteger(dtResult.Rows[dtResult.Rows.Count - 1][0].ToString()) ? int.Parse(dtResult.Rows[dtResult.Rows.Count-1][0].ToString()) : 0;
+                    if (result != 0)
+                    {
+                        result++;
+                    }
                 }
             }
             catch

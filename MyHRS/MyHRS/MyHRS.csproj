@@ -133,6 +133,12 @@
     <Compile Include="Screens\Recruitment\Interview Management.Designer.cs">
       <DependentUpon>Interview Management.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\SearchRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\SearchRecord.Designer.cs">
+      <DependentUpon>SearchRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\SplashLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Recruitment\Interview Management.resx">
       <DependentUpon>Interview Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SearchRecord.resx">
+      <DependentUpon>SearchRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\SplashLogin.resx">
       <DependentUpon>SplashLogin.cs</DependentUpon>

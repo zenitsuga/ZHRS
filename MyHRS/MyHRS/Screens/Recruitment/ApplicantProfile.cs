@@ -135,7 +135,7 @@ namespace MyHRS.Screens.Recruitment
                 #region Suffix
                 LAST_SP_Name = "sp_GetSuffix";
                 cmbSuffix.DataSource = cf.dtGetSelectRecord(LAST_SP_Name);
-                cmbSuffix.ValueMember = "code";
+                cmbSuffix.ValueMember = "id";
                 cmbSuffix.DisplayMember = "Name";
                 #endregion
                 #region CivilStatus
@@ -188,7 +188,40 @@ namespace MyHRS.Screens.Recruitment
             BtnEntry(false);
         }
 
+        private void loadRecord(DataTable dtSelectedRecords)
+        {
+            if (dtSelectedRecords.Rows.Count == 1)
+            {
+                tb_ID.Text = dtSelectedRecords.Rows[0]["id"].ToString();
+                tbLastName.Text = dtSelectedRecords.Rows[0]["lastname"].ToString();
+                tbFirstName.Text = dtSelectedRecords.Rows[0]["firstname"].ToString();
+                tbMiddleName.Text = dtSelectedRecords.Rows[0]["middlename"].ToString();
+                cmbApplicantStatus.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["applicant_status"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["applicant_status"].ToString()) - 1:0;
+                cmbApplicationType.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["application_type"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["application_type"].ToString()) - 1 : 0;
+                cmbNationality.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["nationality"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["nationality"].ToString()) - 1 : 0;
+                cmbGender.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["gender"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["gender"].ToString()) - 1 : 0;
+                cmbCivilStatus.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["civil_status"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["civil_status"].ToString()) - 1 : 0;
+                cmbSuffix.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["suffix"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["suffix"].ToString()): 0;
+                tbEmailAddress.Text = dtSelectedRecords.Rows[0]["email_address"].ToString();
+                tbBirthPlace.Text = dtSelectedRecords.Rows[0]["birth_place"].ToString();
+                tbHeight.Text = dtSelectedRecords.Rows[0]["height"].ToString();
+                tbWeight.Text = dtSelectedRecords.Rows[0]["weight"].ToString();
+                tbBirthPlace.Text = dtSelectedRecords.Rows[0]["birth_place"].ToString();
+                tbMobilePhone1.Text = dtSelectedRecords.Rows[0]["mobile_number1"].ToString();
+                tbMobilePhone2.Text = dtSelectedRecords.Rows[0]["mobile_number2"].ToString();
+                tbMobilePhone3.Text = dtSelectedRecords.Rows[0]["mobile_number3"].ToString();
+                tbPhoneNumber.Text = dtSelectedRecords.Rows[0]["phone_number"].ToString();
+                tbPreAdd_Street.Text = dtSelectedRecords.Rows[0]["present_address_street"].ToString();
+                tbPreAdd_Brgy.Text = dtSelectedRecords.Rows[0]["present_address_brgy"].ToString();
+                tbPreAdd_City.Text = dtSelectedRecords.Rows[0]["present_address_city"].ToString();
+                tbPreAdd_Postal.Text = dtSelectedRecords.Rows[0]["present_address_postal"].ToString();
+                tbPerAdd_Street.Text = dtSelectedRecords.Rows[0]["permanent_address_street"].ToString();
+                tbPerAdd_Brgy.Text = dtSelectedRecords.Rows[0]["permanent_address_brgy"].ToString();
+                tbPerAdd_City.Text = dtSelectedRecords.Rows[0]["permanent_address_city"].ToString();
+                tbPerAdd_Postal.Text = dtSelectedRecords.Rows[0]["permanent_address_postal"].ToString();
 
+            }
+        }
 
         private void btnNew_Click(object sender, EventArgs e)
         {
@@ -199,6 +232,7 @@ namespace MyHRS.Screens.Recruitment
                 cf.ControlObjects(true,groupBox2);
                 cmbApplicantStatus.Focus();
                 BtnEntry(true);
+                ClearTextbox();
             }
         }
 
@@ -257,12 +291,12 @@ namespace MyHRS.Screens.Recruitment
         {
            DialogResult dr = MessageBox.Show("Are you sure you want to save this details?", "Save Applicant Information?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
            if (dr == DialogResult.Yes)
-           {
-               List<PersonalProfile> PersonalProfile = new List<PersonalProfile>();
-               PersonalProfile pp = new PersonalProfile();             
-               pp.applicationDate = dtApplicationDate.Value;
-               pp.applicationStatus = int.Parse(cf.GetComboID(cmbApplicantStatus).ToString());
-               pp.applicationType = int.Parse(cf.GetComboID(cmbApplicationType).ToString());
+           {   
+                   List<PersonalProfile> PersonalProfile = new List<PersonalProfile>();
+                   PersonalProfile pp = new PersonalProfile();
+                   pp.applicationDate = dtApplicationDate.Value;
+                   pp.applicationStatus = int.Parse(cf.GetComboID(cmbApplicantStatus).ToString());
+                   pp.applicationType = int.Parse(cf.GetComboID(cmbApplicationType).ToString());
                    pp.Lastname = tbLastName.Text;
                    pp.Firstname = tbFirstName.Text;
                    pp.Middlename = tbMiddleName.Text;
@@ -292,23 +326,49 @@ namespace MyHRS.Screens.Recruitment
                    pp.Permanent_Address_street = tbPerAdd_Street.Text;
                    pp.Permanent_Address_postal = tbPerAdd_Postal.Text;
                    pp.PhoneNumber = tbPhoneNumber.Text;
-               PersonalProfile.Add(pp);
-               if (PersonalProfile.Count > 0)
-               {
-                   if (!cf.SaveApplicant(PersonalProfile))
+                   PersonalProfile.Add(pp);
+
+                   if (PersonalProfile.Count > 0)
                    {
-                       MessageBox.Show("Error: Cannot save information. Please check your entry", "Save Applicant Information Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                       if (tbLastName.Text == string.Empty || tbFirstName.Text == string.Empty || tb_ID.Text == "0")
+                       {
+                           MessageBox.Show("Error: Cannot save information. Please check your entry", "Save Applicant Information Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                           return;
+                       }
+
+                       if (!cf.checkID(int.Parse(tb_ID.Text)))
+                       {
+                           if (!cf.SaveApplicant(PersonalProfile,"Add"))
+                           {   
+                               MessageBox.Show("Error: Cannot save information. Please check your entry", "Save Applicant Information Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                           }
+                           else
+                           {
+                               MessageBox.Show("Application Information successfully Saved.", "Done Save information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               cf.frm = this;
+                               cf.ControlObjects(false, groupBox2);
+                               LoadAllCombos();
+                               BtnEntry(false);
+                               ClearTextbox();
+                           }
+                       }
+                       else
+                       {
+                           if (!cf.SaveApplicant(PersonalProfile, "Edit"))
+                           {
+                               MessageBox.Show("Error: Cannot save information. Please check your entry", "Save Applicant Information Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                           }
+                           else
+                           {
+                               MessageBox.Show("Application Information successfully Saved.", "Done Save information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                               cf.frm = this;
+                               cf.ControlObjects(false, groupBox2);
+                               LoadAllCombos();
+                               BtnEntry(false);
+                               ClearTextbox();
+                           }
+                       }
                    }
-                   else
-                   {
-                       MessageBox.Show("Application Information successfully Saved.", "Done Save information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                       cf.frm = this;
-                       cf.ControlObjects(false, groupBox2);
-                       LoadAllCombos();
-                       BtnEntry(false);
-                       ClearTextbox();
-                   }
-               }
            }
         }
 
@@ -384,6 +444,57 @@ namespace MyHRS.Screens.Recruitment
             if (chkSamePermanent.Checked)
             {
                 tbPerAdd_Postal.Text = tbPreAdd_Postal.Text;
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            SearchRecord sr = new SearchRecord();
+            sr.Sconn = Sconn;
+            sr.ShowDialog();
+            if (sr.SelectedID != 0)
+            {
+                DataTable dtSelectedRecords = cf.dtGetApplicantRecord(sr.SelectedID);
+                if (dtSelectedRecords.Rows.Count == 1)
+                {
+                    loadRecord(dtSelectedRecords);
+                }
+            }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tb_ID.Text))
+            {
+                MessageBox.Show("Error: No applicant was selected. Please select it first using search button", "No Selected Record found", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            cf.ControlObjects(true, groupBox2);
+            cmbApplicantStatus.Focus();
+            BtnEntry(true);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Are you sure you want to delete this record?", "Confirm to Delete : " + tb_ID.Text, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                if (tb_ID.Text == "0" || tb_ID.Text == string.Empty)
+                {
+                    MessageBox.Show("Error: No record to delete. Please search first.", "No Record to delete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                int ID = cf.isInteger(tb_ID.Text) ? int.Parse(tb_ID.Text) : 0;
+                if (cf.checkID(ID))
+                {
+                    cf.executeSP("sp_DelApplicantByID " + ID);
+                    MessageBox.Show("Deleting record successfully.", "Delete Record Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tb_ID.Text = cf.GetNewID().ToString();
+                    cf.ControlObjects(false, groupBox2);
+                    cmbApplicantStatus.Focus();
+                    BtnEntry(false);
+                    ClearTextbox();
+                }
             }
         }
 

@@ -49,3 +49,4 @@ E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitm
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.Examination_Information.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.Applicant_Masterlist.resources
 E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.Recruitment.ApplicantEvaluation.resources
+E:\ZENITSUGA FILES\ZSystem\ZHRS\MyHRS\MyHRS\obj\x86\Debug\MyHRS.Screens.SearchRecord.resources
