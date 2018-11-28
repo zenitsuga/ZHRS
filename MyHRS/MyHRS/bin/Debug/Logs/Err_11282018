@@ -1,0 +1,43 @@
+Error:	11-28-2018 05:12:52:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 05:13:19:	Database Connection:	Cannot connect to database
+Error:	11-28-2018 05:13:37:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 05:40:33:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 05:59:07:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 06:07:55:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 06:20:39:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 06:20:41:	Database Connection:	Cannot connect to database
+Error:	11-28-2018 06:20:58:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 06:31:55:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 06:42:13:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 07:14:25:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 07:17:00:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 07:25:16:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 07:25:47:	Database Connection:	Cannot connect to database
+Error:	11-28-2018 07:26:03:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 07:37:02:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 07:51:21:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 07:54:11:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 08:01:28:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 08:01:33:	Database Connection:	Cannot connect to database
+Error:	11-28-2018 08:01:48:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 08:07:45:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 08:13:03:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 08:35:56:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 08:44:52:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 08:46:12:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 08:47:02:	Database Connection:	Cannot connect to database
+Error:	11-28-2018 08:47:18:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 08:48:17:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 09:42:05:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 09:48:22:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 09:51:18:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:04:44:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:14:19:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:18:59:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:25:47:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:30:37:	CheckDatabaseConnection:	A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Error:	11-28-2018 10:32:20:	Database Connection:	Cannot connect to database
+Error:	11-28-2018 10:32:36:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:34:21:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:37:00:	SerialKey Invalid:	Serial Key:
+Error:	11-28-2018 10:39:36:	SerialKey Invalid:	Serial Key:

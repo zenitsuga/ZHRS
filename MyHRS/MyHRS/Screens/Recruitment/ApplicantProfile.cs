@@ -135,7 +135,7 @@ namespace MyHRS.Screens.Recruitment
                 #region Suffix
                 LAST_SP_Name = "sp_GetSuffix";
                 cmbSuffix.DataSource = cf.dtGetSelectRecord(LAST_SP_Name);
-                cmbSuffix.ValueMember = "id";
+                cmbSuffix.ValueMember = "code";
                 cmbSuffix.DisplayMember = "Name";
                 #endregion
                 #region CivilStatus
@@ -196,12 +196,13 @@ namespace MyHRS.Screens.Recruitment
                 tbLastName.Text = dtSelectedRecords.Rows[0]["lastname"].ToString();
                 tbFirstName.Text = dtSelectedRecords.Rows[0]["firstname"].ToString();
                 tbMiddleName.Text = dtSelectedRecords.Rows[0]["middlename"].ToString();
-                cmbApplicantStatus.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["applicant_status"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["applicant_status"].ToString()) - 1:0;
-                cmbApplicationType.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["application_type"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["application_type"].ToString()) - 1 : 0;
+                cmbApplicantStatus.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["applicant_status"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["applicant_status"].ToString()) -1 :0;
+                cmbApplicationType.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["application_type"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["application_type"].ToString()) -1: 0;
                 cmbNationality.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["nationality"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["nationality"].ToString()) - 1 : 0;
                 cmbGender.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["gender"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["gender"].ToString()) - 1 : 0;
                 cmbCivilStatus.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["civil_status"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["civil_status"].ToString()) - 1 : 0;
-                cmbSuffix.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["suffix"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["suffix"].ToString()): 0;
+                cmbSuffix.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["suffix"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["suffix"].ToString()) -2: 0;
+                cmbBloodType.SelectedIndex = cf.isInteger(dtSelectedRecords.Rows[0]["blood_type"].ToString()) ? int.Parse(dtSelectedRecords.Rows[0]["blood_type"].ToString()) - 1 : 0;
                 tbEmailAddress.Text = dtSelectedRecords.Rows[0]["email_address"].ToString();
                 tbBirthPlace.Text = dtSelectedRecords.Rows[0]["birth_place"].ToString();
                 tbHeight.Text = dtSelectedRecords.Rows[0]["height"].ToString();
@@ -228,11 +229,11 @@ namespace MyHRS.Screens.Recruitment
             DialogResult dr = MessageBox.Show("Are you sure you want to create a new transaction?", "Create New Profile", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
+                ClearTextbox();
                 tb_ID.Text = cf.GetNewID().ToString();
                 cf.ControlObjects(true,groupBox2);
                 cmbApplicantStatus.Focus();
                 BtnEntry(true);
-                ClearTextbox();
             }
         }
 

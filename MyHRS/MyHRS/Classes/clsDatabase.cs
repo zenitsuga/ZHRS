@@ -20,7 +20,7 @@ namespace MyHRS.Classes
                 string SQLConnString = string.Empty;
                 if (SQLType.ToLower() == "sql")
                 {
-                    SQLConnString = "Server = " + ServerName + "; Database = " + Database + "; User Id = " + Username + ";Password = " + Password + ";";
+                    SQLConnString = "Server = " + ServerName + "; Database = " + Database + "; User Id = " + Username + ";Password = " + Password + ";MultipleActiveResultSets=true;";
                 }
                 if (!string.IsNullOrEmpty(SQLConnString))
                 {
@@ -45,7 +45,7 @@ namespace MyHRS.Classes
                 string SQLConnString = string.Empty;
                 if (SQLType.ToLower() == "sql")
                 {
-                    SQLConnString = "Server = " + ServerName + "; Database = " + Database + "; User Id = "+ Username +";Password = "+Password+";";
+                    SQLConnString = "Server = " + ServerName + "; Database = " + Database + "; User Id = " + Username + ";Password = " + Password + ";MultipleActiveResultSets=true;";
                 }
                 if (!string.IsNullOrEmpty(SQLConnString))
                 {
@@ -79,6 +79,7 @@ namespace MyHRS.Classes
                         SqlCommand sqlcom = new SqlCommand(SQLStatement, SQLConn);
                         sqlcom.ExecuteReader();
                         result = true;
+                        sqlcom.Dispose();
                     }
                 }
             }

@@ -458,11 +458,16 @@ namespace MyHRS.Classes
                 DataTable dtResult = cd.ExecuteQuery("exec sp_GetapplicantList 'All'");
                 if (dtResult.Rows.Count > 0)
                 {
-                    result = isInteger(dtResult.Rows[dtResult.Rows.Count - 1][0].ToString()) ? int.Parse(dtResult.Rows[dtResult.Rows.Count-1][0].ToString()) : 0;
+                    result = isInteger(dtResult.Rows[dtResult.Rows.Count - 1][0].ToString()) ? int.Parse(dtResult.Rows[dtResult.Rows.Count - 1][0].ToString()) : 0;
                     if (result != 0)
                     {
                         result++;
                     }
+                }
+                else
+                {
+                    if(dtResult.Rows.Count == 0)
+                    result++;
                 }
             }
             catch
