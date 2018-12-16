@@ -37,6 +37,11 @@
             this.databaseConnectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tssRecruitment = new System.Windows.Forms.ToolStripMenuItem();
             this.masterlistsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sourcingAndApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,11 +49,6 @@
             this.evaluationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tssEmployee = new System.Windows.Forms.ToolStripMenuItem();
             this.masterlistToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.companyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.pnlMenuGroup3 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -139,6 +139,41 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helpToolStripMenuItem,
+            this.systemToolStripMenuItem,
+            this.companyToolStripMenuItem,
+            this.registrationToolStripMenuItem});
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "&About";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.helpToolStripMenuItem.Text = "&Help";
+            // 
+            // systemToolStripMenuItem
+            // 
+            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.systemToolStripMenuItem.Text = "&System";
+            // 
+            // companyToolStripMenuItem
+            // 
+            this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
+            this.companyToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.companyToolStripMenuItem.Text = "&Company";
+            // 
+            // registrationToolStripMenuItem
+            // 
+            this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.registrationToolStripMenuItem.Text = "&Registration";
+            // 
             // tssRecruitment
             // 
             this.tssRecruitment.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -197,41 +232,6 @@
             this.masterlistToolStripMenuItem.Name = "masterlistToolStripMenuItem";
             this.masterlistToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.masterlistToolStripMenuItem.Text = "Masterlist";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.helpToolStripMenuItem,
-            this.systemToolStripMenuItem,
-            this.companyToolStripMenuItem,
-            this.registrationToolStripMenuItem});
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
-            this.aboutToolStripMenuItem.Text = "&About";
-            // 
-            // helpToolStripMenuItem
-            // 
-            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.helpToolStripMenuItem.Text = "&Help";
-            // 
-            // systemToolStripMenuItem
-            // 
-            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
-            this.systemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.systemToolStripMenuItem.Text = "&System";
-            // 
-            // companyToolStripMenuItem
-            // 
-            this.companyToolStripMenuItem.Name = "companyToolStripMenuItem";
-            this.companyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.companyToolStripMenuItem.Text = "&Company";
-            // 
-            // registrationToolStripMenuItem
-            // 
-            this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
-            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.registrationToolStripMenuItem.Text = "&Registration";
             // 
             // pnlMenu
             // 
@@ -350,7 +350,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 25);
             this.button5.TabIndex = 2;
-            this.button5.Text = "Sub Menu 2";
+            this.button5.Text = "Employee Masterlist";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.UseVisualStyleBackColor = false;
             // 
@@ -364,9 +364,10 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(200, 25);
             this.button6.TabIndex = 1;
-            this.button6.Text = "MasterList";
+            this.button6.Text = "Employee Acceptance";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // pnlMenuGroup1
             // 

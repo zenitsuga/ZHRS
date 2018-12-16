@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MyHRS.Screens;
 using MyHRS.Screens.Recruitment;
+using MyHRS.Screens.Employee;
 using System.Data.SqlClient;
 using MyHRS.Classes;
 
@@ -131,6 +132,18 @@ namespace MyHRS
             hp.Sconn = Sconn;
             if (cf.isChildFormLoaded(hp.Name))
                 hp.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Masterlist ml = new Masterlist();
+            ml.MdiParent = this;
+            ml.StartPosition = FormStartPosition.Manual;
+            ml.Top = 0;
+            ml.Left = 0;
+            ml.Sconn = Sconn;
+            if (cf.isChildFormLoaded(ml.Name))
+                ml.Show();
         }
     }
 }

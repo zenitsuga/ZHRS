@@ -541,5 +541,22 @@ namespace MyHRS.Classes
         }
 
         #endregion
+
+        #region Masterlist_employee
+        public DataTable dtGetEmployeeStatus()
+        {
+            DataTable dtResult = new DataTable();
+            try
+            {
+                cd.SQLConn = SQLConn;
+                cd.SQLType = "sql";
+                dtResult = cd.ExecuteSP("sp_GetEmployeeStatus");
+            }
+            catch
+            {
+            }
+            return dtResult;
+        }
+        #endregion
     }
 }
